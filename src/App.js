@@ -23,7 +23,6 @@ import { login } from "./utils/ApiUtils";
 import { ACCESS_TOKEN } from "./utils/constant";
 
 // Articles
-import ArticlesMaster from "./pages/ArticlesMaster";
 import ShowArticle from "./components/article/articleComponents/ShowArticle";
 import Content from "./components/article/innerArticles/Content";
 
@@ -33,17 +32,17 @@ const App = () => {
       {},
       { email: "thita@gmail.com", password: "thita" }
     );
-    login(loginRequest)
-      .then((response) => {
-        localStorage.setItem(ACCESS_TOKEN, response.accessToken);
-        console.log("You're successfully logged in!");
-      })
-      .catch((error) => {
-        console.log(
-          (error && error.message) ||
-            "Oops! Something went wrong. Please try again!"
-        );
-      });
+    // login(loginRequest)
+    //   .then((response) => {
+    //     localStorage.setItem(ACCESS_TOKEN, response.accessToken);
+    //     console.log("You're successfully logged in!");
+    //   })
+    //   .catch((error) => {
+    //     console.log(
+    //       (error && error.message) ||
+    //         "Oops! Something went wrong. Please try again!"
+    //     );
+    //   });
   }, []);
   return (
     <Router>
@@ -58,9 +57,8 @@ const App = () => {
         <Route path="/blogGit" element={<GithubStudentDeveloper />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products1" element={<CommingSoon />} />
-        <Route path="/Articles1" element={<ArticlesMaster />} />
         <Route path="/Articles" element={<ShowArticle />}>
-          <Route path=":name" element={<Content />} />
+          <Route path=":articleName" element={<Content />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

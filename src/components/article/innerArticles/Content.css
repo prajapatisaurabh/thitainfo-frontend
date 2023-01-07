@@ -1,0 +1,19 @@
+.fontDetails {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 19px;
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+.headerDetails {
+  font-size: 38px;
+  text-align: justify;
+  font-family: Serif;
+  padding-top: 10px;
+}
+
+.listDetails {
+  list-style: none;
+  cursor: pointer;
+}
