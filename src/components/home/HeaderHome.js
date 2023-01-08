@@ -14,16 +14,16 @@ const HeaderHome = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const links = [
-    { to: "/about", text: "About" },
-    { to: "/service", text: "Services" },
-    { to: "/team", text: "Team" },
-    { to: "/pricing", text: "Pricing" },
-    { to: "/blog", text: "Blog" },
-    { to: "/Articles", text: "Interview Preparation" },
+    { to: "/about", text: "About", id: 11110 },
+    { to: "/service", text: "Services", id: 11112 },
+    { to: "/team", text: "Team", id: 1111 },
+    { to: "/pricing", text: "Pricing", id: 11113 },
+    { to: "/blog", text: "Blog", id: 11114 },
+    { to: "/Articles", text: "Interview Preparation", id: 11115 },
   ];
-  const createNavItem = ({ to, text }) => (
-    <NavItem>
-      <NavLink key={to} tag={Link} to={to}>
+  const createNavItem = ({ to, text, id }) => (
+    <NavItem key={id.toString()}>
+      <NavLink tag={Link} to={to}>
         {text}
       </NavLink>
     </NavItem>
@@ -42,63 +42,6 @@ const HeaderHome = () => {
         </Collapse>
       </Navbar>
     </Container>
-
-    // <header id="header" className="d-flex align-items-center">
-    //   <div className="container d-flex justify-content-between align-items-center">
-    //     <div className="logo">
-    //       <h1>
-    //         <Link to="/">thita info</Link>
-    //       </h1>
-    //     </div>
-
-    //     <nav id="navbar" className="navbar">
-    //       <ul>
-    //         <li>
-    //           <Link to="/" className="active">
-    //             Home
-    //           </Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/about">About</Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/service">Services</Link>
-    //         </li>
-    //         {/* <li>
-    //           <Link to="/portfolio">Resume</Link>
-    //         </li> */}
-    //         <li>
-    //           <Link to="/team">Team</Link>
-    //         </li>
-    //         {/* <li>
-    //           <Link to="/pricing">Pricing</Link>
-    //         </li> */}
-    //         <li>
-    //           <Link to="/blog">Blog</Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/Articles">Interview Preparation</Link>
-    //         </li>
-    //         {/* <li className="dropdown">
-    //           <a href="/javaArticle">
-    //             <span>Interview Preparation</span>{" "}
-    //             <i className="bi bi-chevron-down"></i>
-    //           </a>
-    //           <ul>
-    //             <li>
-    //               <Link to="/javaArticle">100 Java Interview Question</Link>
-    //             </li>
-
-    //             <li>
-    //               <Link to="/python100">100 Python Interview Question</Link>
-    //             </li>
-    //           </ul>
-    //         </li> */}
-    //       </ul>
-    //       <i className="bi bi-list mobile-nav-toggle"></i>
-    //     </nav>
-    //   </div>
-    // </header>)
   );
 };
 

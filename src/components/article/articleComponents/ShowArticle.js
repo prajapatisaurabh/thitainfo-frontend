@@ -8,7 +8,7 @@ import { TreeviewData } from "../Constant";
 // Import 3 core
 import Content from "../innerArticles/Content";
 import ContentIndex from "../innerArticles/ContentIndex";
-import Tree from "../innerArticles/Tree";
+import Tree from "../innerArticles/component/Tree";
 
 const ShowArticle = () => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const ShowArticle = () => {
       <Row>
         <Col className="bg-light" xs="3">
           <ListGroup numbered>{linkList}</ListGroup>
-          <Tree data={TreeviewData} />
+          {/* <Tree data={TreeviewData} /> */}
         </Col>
         <Col className="bg-light" xs="9">
           <Row>

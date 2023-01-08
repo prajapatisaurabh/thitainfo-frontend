@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Tree from "./Tree";
-import "./Content.css";
-
+import "../Content.css";
 const TreeNode = ({ data }) => {
   const { label, children } = data;
   const [collapsed, setCollapsed] = useState(true);
