@@ -15,25 +15,26 @@ const Content = () => {
     renderdata = (
       <div>
         <section className="HeaderSection p-0">
-          <h3 className="headerDetails">{product.articleName}</h3>
+          <h3 className="headerDetails font-monospace">
+            {product.articleName}
+          </h3>
           <Author author={product.artcleMetadata} />
         </section>
         <hr />
         <section className="p-0">
-          <div>
-            <h4>
-              {product.ListView.map((ex) =>
-                ex.Example.map((exp, index) => (
-                  <Example key={index} code={exp} />
-                ))
-              )}
-            </h4>
-          </div>
+          {product.ListView.map((prod, index) => (
+            <div key={index}>
+              <p className="h2 font-monospace">{prod.header}</p>
+              <p className="h5">{prod.description}</p>
+              <Example examples={prod.Example} />
+              <hr />
+            </div>
+          ))}
         </section>
       </div>
     );
   } else {
-    renderdata = <h2>Sorry. Product doesn't exist</h2>;
+    renderdata = <h2>Please select any article</h2>;
   }
   return (
     <>
