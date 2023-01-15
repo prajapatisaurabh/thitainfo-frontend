@@ -8,6 +8,7 @@ export const productData = [
       level: "Easy",
     },
     description: "",
+    hasListView: true,
     ListView: [
       {
         header: "JShell Basics",
@@ -49,6 +50,8 @@ export const productData = [
         ],
       },
     ],
+    hasList: false,
+    List: [],
     conclustion: `JShell also includes a number of built-in commands that allow you to explore the APIs of the Java platform. For example, you can use the "/list" command to list all the methods and variables you have defined, or the "/imports" command to see which packages are currently imported.
       Overall, JShell is a useful tool for learning and exploring Java, and can save you time by allowing you to quickly test code snippets without having to create a full Java program.`,
   },
@@ -62,6 +65,7 @@ export const productData = [
     },
     description:
       "Java 8 was a major release of the Java programming language that introduced several new features and improvements. Some of the notable features introduced in Java 8 are",
+    hasListView: true,
     ListView: [
       {
         header: "Lambda expressions",
@@ -197,7 +201,47 @@ export const productData = [
         conclustion: "",
       },
     ],
+    hasList: false,
+    List: [],
     conclustion: "",
+  },
+  {
+    articleId: "id6",
+    articleName: "PDB File Format Explained",
+    artcleMetadata: {
+      user: "saurabh prajapati",
+      date: "14 Jan 2023",
+      level: "Easy",
+    },
+    description:
+      "Java 8 was a major release of the Java programming language that introduced several new features and improvements. Some of the notable features introduced in Java 8 are",
+    hasListView: false,
+    ListView: [],
+    hasList: true,
+    List: [
+      {
+        id: 1,
+        text: "A .PDB file, also known as a Program Database file, is a file format used in debugging for holding debugging information about a program or application. The .PDB file is created when a program is compiled with debugging information enabled and is used by debuggers and other tools to help with analyzing and understanding the program's behavior during runtime.",
+      },
+      {
+        id: 2,
+        text: ".PDB files contain a variety of information that can be useful for debugging, including the program's symbols, line numbers, and source file information. Symbols are the names of variables, functions, and other program elements that can be used by the debugger to understand the program's behavior. Line numbers provide the debugger with information about which lines of code correspond to a given part of the program's binary. Source file information provides the location of the original source code that was used to create the program.",
+      },
+      {
+        id: 3,
+        text: "When a program is executed, the debug information in the PDB file can be used to match the program's binary code with the original source code, which makes it possible for the debugger to provide detailed information about the program's state and the variables used in each line. The debugger can also use the information in the PDB file to produce a call stack and to display the values of variables during debugging.",
+      },
+      {
+        id: 4,
+        text: "The information in a .PDB file can also be used to profile the performance of a program, as the file contains information about the program's memory layout and usage, as well as information about how the program uses the CPU. This allows developers to identify performance bottlenecks and optimize their code.",
+      },
+      {
+        id: 5,
+        text: "It's important to note that PDB files are not necessary for the runtime execution of the program, they are used only for the debugging and optimization process. During the release version of a program, it's not recommend to distribute the PDB files along with the program, as it can expose sensitive information about the code.",
+      },
+    ],
+    conclustion:
+      "In summary, .PDB files are an important tool in the debugging process and play a critical role in helping developers understand, optimize and fix their code. The information they contain can provide valuable insights into the behavior of a program and help developers identify and resolve issues more quickly.",
   },
 ];
 

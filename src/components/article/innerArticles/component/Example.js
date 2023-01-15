@@ -7,7 +7,7 @@ const Example = ({ examples }) => {
       {examples.map((example, index) => (
         <span key={index}>
           <br />
-          <p className="fontDetails fw-normal">
+          <p className="fontDetails">
             <b>{index + 1}</b>.{example.problem}
           </p>
           <div>
