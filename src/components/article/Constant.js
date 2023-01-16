@@ -243,6 +243,237 @@ export const productData = [
     conclustion:
       "In summary, .PDB files are an important tool in the debugging process and play a critical role in helping developers understand, optimize and fix their code. The information they contain can provide valuable insights into the behavior of a program and help developers identify and resolve issues more quickly.",
   },
+  {
+    articleId: "id10",
+    articleName: "Streams API",
+    artcleMetadata: {
+      user: "saurabh prajapati",
+      date: "14 Jan 2023",
+      level: "Easy",
+    },
+    description:
+      "Streams in Java are a way to process large amounts of data in a stream-like fashion, allowing for efficient and memory-friendly processing. They are a part of the Java 8 Streams API, which provides a functional and declarative approach to data processing.",
+    hasListView: true,
+    ListView: [
+      {
+        header: "Lambda expressions",
+        description: "",
+        hasExample: true,
+        Example: [
+          {
+            problem:
+              "Here is an example of using a Stream to filter and print out the names of all employees who have a salary greater than $50,000:",
+            code: `List<Employee> employees = // ...
+            employees.stream()
+                .filter(e -> e.getSalary() > 50000)
+                .map(Employee::getName)
+                .forEach(System.out::println);
+            `,
+            language: "java",
+            output: "",
+            solution: `n this example, employees.stream() creates a Stream from the employees list. The filter method filters the stream to include only employees with a salary greater than $50,000. The map method then extracts the name of each employee, and the forEach method is used to print out the names of the filtered employees.`,
+          },
+          {
+            problem:
+              "It's also possible to use parallel streams that allow you to perform operations in parallel. This can be useful when working with large data sets to improve performance.",
+            code: `List<Employee> employees = // ...
+            employees.parallelStream()
+                .filter(e -> e.getSalary() > 50000)
+                .map(Employee::getName)
+                .forEach(System.out::println);
+            `,
+            language: "java",
+            output: "",
+            solution:
+              "It's important to note that parallel streams are not guaranteed to be executed in any particular order, and the order of the output may be different than the input order.",
+          },
+        ],
+        conclustion:
+          " Streams in Java provide a powerful and convenient way to work with large data sets, and can greatly simplify data processing tasks. With the use of functional operations like filter, map, and reduce, you can write concise and expressive code that is easy to understand and maintain.",
+      },
+    ],
+    hasList: false,
+    List: [],
+    conclustion: "",
+  },
+  {
+    articleId: "id11",
+    articleName: "Optional",
+    artcleMetadata: {
+      user: "saurabh prajapati",
+      date: "14 Jan 2023",
+      level: "Easy",
+    },
+    description:
+      "This is a container object used to represent the absence of a value. It helps to prevent null reference exceptions by explicitly representing the absence of a value" +
+      "In Java, Optional is a container object used to represent the presence or absence of a value. It was introduced in Java 8 as a way to improve the handling of null values and to prevent common null pointer exceptions.",
+    hasListView: true,
+    ListView: [
+      {
+        header: "Lambda expressions",
+        description: "",
+        hasExample: true,
+        Example: [
+          {
+            problem:
+              "Optional is a generic class, and it's often used to wrap a value that may or may not be present. For example, the following code creates an Optional object that contains a value of type Integer:",
+            code: `Optional<Integer> optional = Optional.of(5);
+            `,
+            language: "java",
+            output: "",
+            solution: "",
+          },
+          {
+            problem:
+              "You can also create an empty Optional object that represents the absence of a value:",
+            code: `Optional<Integer> emptyOptional = Optional.empty();
+            `,
+            language: "java",
+            output: "",
+            solution: "",
+          },
+          {
+            problem: "You can also create an optional from a nullable value",
+            code: `Integer value = null;
+            Optional<Integer> fromNullable = Optional.ofNullable(value);
+            `,
+            language: "java",
+            output: "",
+            solution: "",
+          },
+          {
+            problem:
+              "You can use various methods to check if the Optional has a value or not such as :",
+            code: `optional.isPresent();  // check if it has a value
+            optional.get();  // get the value if it has
+            optional.orElse(0); // get the value if it has else return 0
+            `,
+            language: "java",
+            output: "",
+            solution: "",
+          },
+          {
+            problem:
+              "Here is an example of using Optional to handle a potentially null value:",
+            code: `class Person {
+              private String name;
+              public String getName() { return name; }
+          }
+          
+          Person p = new Person();
+          
+          Optional<String> name = Optional.ofNullable(p.getName());
+          
+          if (name.isPresent()) {
+              System.out.println("Name: " + name.get());
+          } else {
+              System.out.println("Name not found");
+          }
+          `,
+            language: "java",
+            output: "",
+            solution:
+              "In this example, the getName method of the Person class may return a null value. By wrapping the result in an Optional object, we can use the isPresent method to check if a name is present, and the get method to retrieve the name if it is. This can help to prevent null pointer exceptions and make the code more readable.",
+          },
+        ],
+        conclustion:
+          "Overall, Optional is a useful tool for dealing with the presence or absence of values in a safe and readable way. It can help to improve the robustness and maintainability of your code by making it clear when a value may be absent, and by providing a convenient way to handle such cases.",
+      },
+    ],
+    hasList: false,
+    List: [],
+    conclustion: "",
+  },
+  {
+    articleId: "id12",
+    articleName: "Default methods",
+    artcleMetadata: {
+      user: "saurabh prajapati",
+      date: "14 Jan 2023",
+      level: "Easy",
+    },
+    description:
+      "These allow you to add new methods to interfaces without breaking existing implementations." +
+      "In Java, default methods (also known as defender methods or virtual extension methods) are methods that are defined in an interface with a default implementation. They were introduced in Java 8 as a way to add new functionality to existing interfaces without breaking existing code that implements those interfaces.",
+    hasListView: true,
+    ListView: [
+      {
+        header: "Lambda expressions",
+        description: "",
+        hasExample: true,
+        Example: [
+          {
+            problem:
+              "A default method is defined in an interface with the default keyword, followed by the method signature and implementation. Here is an example of a default method called getDescription that is added to the Shape interface:",
+            code: `interface Shape {
+              double getArea();
+              default String getDescription() {
+                  return "This is a shape with an area of " + getArea();
+              }
+          }
+          `,
+            language: "java",
+            output: "",
+            solution:
+              "Classes that implement the Shape interface can choose to override the default implementation of the getDescription method if they want to provide a different behavior.",
+          },
+          {
+            problem:
+              "Here is an example of a Rectangle class that implements the Shape interface and overrides the getDescription method:",
+            code: `class Rectangle implements Shape {
+              private double width;
+              private double height;
+          
+              public Rectangle(double width, double height) {
+                  this.width = width;
+                  this.height = height;
+              }
+          
+              @Override
+              public double getArea() {
+                  return width * height;
+              }
+          
+              @Override
+              public String getDescription() {
+                  return "This is a rectangle with width " + width + " and height " + height;
+              }
+          }
+          `,
+            language: "java",
+            output: "",
+            solution:
+              "In this example, the Rectangle class implements the Shape interface, and provides its own implementation of the getDescription method. The getArea method is inherited from the Shape interface, and its implementation is not overridden.",
+          },
+          {
+            problem:
+              "When you create an object of the Rectangle class and call the getDescription method, the overridden implementation from the Rectangle class is used.",
+            code: `Rectangle rectangle = new Rectangle(5,10);
+            System.out.println(rectangle.getDescription()); // Output : This is a rectangle with width 5 and height 10
+            `,
+            language: "java",
+            output: "",
+            solution: "",
+          },
+          {
+            problem:
+              "On the other hand, if you create an instance of an interface, you will have to use the default method of the interface",
+            code: `Shape shape = new Rectangle(5,10);
+            System.out.println(shape.getDescription()); // Output : This is a shape with an area of 50.0
+            `,
+            language: "java",
+            output: "",
+            solution: "",
+          },
+        ],
+        conclustion:
+          "In summary, default methods in Java allow interfaces to provide default implementations for methods. This allows developers to add new functionality to existing interfaces without breaking existing code. Classes that implement these interfaces can choose to override the default implementation if they want to provide a different behavior.",
+      },
+    ],
+    hasList: false,
+    List: [],
+    conclustion: "",
+  },
 ];
 
 export const TreeviewData = [
