@@ -1,5 +1,13 @@
 import React from "react";
-import { Container, ListGroup, ListGroupItem } from "reactstrap";
+import {
+  CardBody,
+  CardHeader,
+  CardText,
+  Container,
+  ListGroup,
+  ListGroupItem,
+  Card,
+} from "reactstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import "./Content.css";
 import { productData } from "../Constant";
@@ -14,6 +22,7 @@ const Content = () => {
   var renderdata;
   let listview = <></>;
   let list = <></>;
+  let conclusion = <></>;
   if (product) {
     renderdata = (
       <>
@@ -24,31 +33,49 @@ const Content = () => {
         <hr />
       </>
     );
+
     if (product.hasListView) {
       listview = (
         <section className="p-0">
           {product.ListView.map((prod, index) => (
-            <div key={index}>
-              <p className="h2 font-monospace">{prod.header}</p>
-              <p className="h5 fontDetails">{prod.description}</p>
-              <Example examples={prod.Example} />
-              <hr />
-            </div>
+            <Card outline className="my-2" key={index}>
+              <CardHeader tag="h3">{prod.header}</CardHeader>
+              <CardBody>
+                <CardText>{prod.description}</CardText>
+              </CardBody>
+            </Card>
           ))}
         </section>
       );
     }
     if (product.hasList) {
       list = (
-        <section className="p-0">
+        <section className="p-0 ">
           <ListGroup flush numbered>
             {product.List.map((prod, index) => (
-              <ListGroupItem key={index} className="listgroupDetails">
-                {prod.text}
-              </ListGroupItem>
+              <>
+                <Card key={index} className="listgroupDetails">
+                  <CardBody>
+                    <CardText>
+                      {index + 1}. {prod.text}
+                    </CardText>
+                    <CardText>
+                      <Example
+                        hasExample={prod.hasExample}
+                        examples={prod.example}
+                      />
+                    </CardText>
+                  </CardBody>
+                </Card>
+              </>
             ))}
           </ListGroup>
         </section>
+      );
+    }
+    if (product.conclustion) {
+      conclusion = (
+        <p className="listgroupDetails pt-3">{product.conclustion}</p>
       );
     }
   } else {
@@ -76,6 +103,7 @@ const Content = () => {
         {renderdata}
         {listview}
         {list}
+        {conclusion}
       </Container>
     </>
   );

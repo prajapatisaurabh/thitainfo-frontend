@@ -1,26 +1,40 @@
 import React from "react";
-import { CopyBlock, a11yDark } from "react-code-blocks";
+import { CopyBlock, a11yDark, atomOneDark } from "react-code-blocks";
+import "../Content.css";
 
-const Example = ({ examples }) => {
-  return (
-    <>
-      {examples.map((example, index) => (
-        <span key={index}>
-          <br />
-          <p className="fontDetails">
-            <b>{index + 1}</b>.{example.problem}
+const Example = ({ hasExample, examples }) => {
+  let example;
+  let output = <></>;
+
+  if (hasExample) {
+    if (examples.output) {
+      output = (
+        <>
+          <p className="strick">
+            <span>Output OR Explanation</span>
           </p>
           <div>
-            <CopyBlock
-              text={example.code}
-              language="javascript"
-              theme={a11yDark}
-            />
+            <CopyBlock text={examples.output} theme={atomOneDark} />
           </div>
-        </span>
-      ))}
-    </>
-  );
+        </>
+      );
+    }
+    example = (
+      <span>
+        <div>
+          <CopyBlock
+            text={examples.code}
+            language={examples.language}
+            theme={a11yDark}
+          />
+        </div>
+        {output}
+      </span>
+    );
+  } else {
+    example = <></>;
+  }
+  return <>{example}</>;
 };
 
 export default Example;
