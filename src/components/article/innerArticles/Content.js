@@ -13,6 +13,7 @@ import "./Content.css";
 import { productData } from "../Constant";
 import Example from "./component/Example";
 import Author from "./component/Author";
+
 const Content = () => {
   const navigate = useNavigate();
   const { articleName } = useParams();
@@ -23,6 +24,7 @@ const Content = () => {
   let listview = <></>;
   let list = <></>;
   let conclusion = <></>;
+  let description = <></>;
   if (product) {
     renderdata = (
       <>
@@ -39,7 +41,7 @@ const Content = () => {
         <section className="p-0">
           {product.ListView.map((prod, index) => (
             <Card outline className="my-2" key={index}>
-              <CardHeader tag="h3">{prod.header}</CardHeader>
+              <CardHeader tag="h5">{prod.header}</CardHeader>
               <CardBody>
                 <CardText>{prod.description}</CardText>
               </CardBody>
@@ -78,6 +80,10 @@ const Content = () => {
         <p className="listgroupDetails pt-3">{product.conclustion}</p>
       );
     }
+
+    if (product.description) {
+      description = <p>{product.description}</p>;
+    }
   } else {
     renderdata = (
       <>
@@ -101,6 +107,7 @@ const Content = () => {
     <>
       <Container>
         {renderdata}
+        {description}
         {listview}
         {list}
         {conclusion}
