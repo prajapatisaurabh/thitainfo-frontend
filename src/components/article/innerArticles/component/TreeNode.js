@@ -1,19 +1,39 @@
 import React, { useState } from "react";
 import Tree from "./Tree";
 import "../Content.css";
+import { useNavigate } from "react-router-dom";
+
 const TreeNode = ({ data }) => {
   const { label, children } = data;
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
+  const handleCollapsed = () => {
+    setCollapsed(!collapsed);
+  };
+  const navigate = useNavigate();
   return (
-    <li className="listDetails" onClick={() => setCollapsed(!collapsed)}>
-      {/* <button onClick={() => setCollapsed(!collapsed)}>
-        {collapsed ? "+" : "-"}
-      </button> */}
-      {label}
-      {!collapsed && children && children.length > 0 && (
-        <Tree data={children} />
-      )}
-    </li>
+    <>
+      <div
+        onClick={handleCollapsed}
+        style={{ marginBottom: "10px", cursor: "pointer" }}
+      >
+        <span
+          onClick={() => {
+            navigate(`/Articles/${label}`);
+          }}
+        >
+          {label}
+        </span>
+      </div>
+      <ul
+        style={{
+          paddingLeft: "10px",
+          borderLeft: "1px solid black",
+          cursor: "pointer",
+        }}
+      >
+        {collapsed && children && <Tree treeData={children} />}
+      </ul>
+    </>
   );
 };
 export default TreeNode;

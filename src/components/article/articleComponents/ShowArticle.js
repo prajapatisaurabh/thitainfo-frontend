@@ -1,6 +1,5 @@
 import React from "react";
-import { Col, Row, ListGroup, ListGroupItem } from "reactstrap";
-import { useNavigate } from "react-router-dom";
+import { Col, Row } from "reactstrap";
 // css
 import "./article.css";
 import { productData } from "../Constant";
@@ -11,27 +10,11 @@ import ContentIndex from "../innerArticles/ContentIndex";
 import Tree from "../innerArticles/component/Tree";
 
 const ShowArticle = () => {
-  const navigate = useNavigate();
-  const linkList = productData.map((product) => {
-    return (
-      <ListGroupItem
-        key={product.articleId}
-        onClick={() => {
-          navigate(`/Articles/${product.articleName}`);
-        }}
-        className="listGroupDetails"
-      >
-        {product.articleName}
-      </ListGroupItem>
-    );
-  });
-
   return (
     <>
       <Row>
         <Col className="bg-light" xs="3">
-          <ListGroup numbered>{linkList}</ListGroup>
-          {/* <Tree data={TreeviewData} /> */}
+          <Tree treeData={TreeviewData} />
         </Col>
         <Col className="bg-light" xs="9">
           <Row>
