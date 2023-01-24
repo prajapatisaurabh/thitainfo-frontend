@@ -12,7 +12,6 @@ import Pricing from "./pages/Pricing";
 
 // Blogs
 import Blog from "./pages/Blog";
-import GithubStudentDeveloper from "./components/blog/blogs/GithubStudentDeveloper";
 
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
@@ -54,7 +53,6 @@ const App = () => {
         <Route path="/team" element={<Team />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blogGit" element={<GithubStudentDeveloper />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products1" element={<CommingSoon />} />
         <Route path="/Articles" element={<ShowArticle />}>

@@ -1,9 +1,6 @@
 import React from "react";
-import SideBar from "../components/blog/SideBar";
-// Articles
-import ScienceCity from "../components/blog/ScienceCity";
-import GithubStudentPack from "../components/blog/GithubStudentPack";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import MyBlog from "../components/blog/MyBlog";
 
 const Blog = () => (
   <main id="main">
@@ -21,20 +18,7 @@ const Blog = () => (
 
     <section id="blog" className="blog">
       <Container>
-        <Row className="m-15">
-          <Col sm={8}>
-            <GithubStudentPack />
-          </Col>
-          <Col sm={4}>
-            <SideBar />
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={8}>
-            <ScienceCity />
-          </Col>
-          <Col sm={4}></Col>
-        </Row>
+        <MyBlog />
       </Container>
     </section>
   </main>
