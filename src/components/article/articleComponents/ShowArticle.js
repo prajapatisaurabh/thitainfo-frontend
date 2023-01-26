@@ -2,7 +2,6 @@ import React from "react";
 import { Col, Row } from "reactstrap";
 // css
 import "./article.css";
-import { productData } from "../Constant";
 import { TreeviewData } from "../Constant";
 // Import 3 core
 import Content from "../innerArticles/Content";

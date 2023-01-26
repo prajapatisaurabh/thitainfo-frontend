@@ -1,12 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Button } from "reactstrap";
 
 const EntryContent = ({ blogInfo }) => {
+  const navigate = useNavigate();
   return (
     <div className="entry-content">
       <p className="font-monospace">{blogInfo.header}</p>
       <div className="read-more">
-        <Link to={`/${blogInfo.readMoreBtn}`}>Read More</Link>
+        <Button
+          onClick={() => {
+            navigate(`/blogs/${blogInfo.readMoreBtn}`);
+          }}
+        >
+          Read More
+        </Button>
       </div>
     </div>
   );

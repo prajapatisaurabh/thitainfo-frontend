@@ -5,7 +5,7 @@ export const BlogJson = [
     author: {
       name: "Saurabh Prajapati",
       location: "Ahmedabad",
-      date: "2023",
+      date: "2022-06-12",
     },
     image: {
       link: "assets/img/blog/blog-1.jpg",
@@ -25,7 +25,7 @@ export const BlogJson = [
     author: {
       name: "Saurabh Prajapati",
       location: "Ahmedabad",
-      date: "2023",
+      date: "2022-06-12",
     },
     image: {
       link: "assets/img/blog/githubstudent.png",
@@ -45,18 +45,16 @@ export const BlogJson = [
     author: {
       name: "Saurabh Prajapati",
       location: "Ahmedabad",
-      date: "2023",
+      date: "2022-06-12",
     },
     image: {
       link: "assets/img/blog/blog-1.jpg",
     },
     contentHeader: {
       header: `Gujarat Science City is a science education and entertainment centre
-    located in Ahmedabad, Gujarat, India. Opened in 2002, it has an IMAX
-    3D theatre; exhibitions on science, space, energy, life sciences,
-    plants, nature and robotics; an aquarium, an aviary and a butterfly
+    located in Ahmedabad,  an aquarium, an aviary and a butterfly
     park; as well as other facilities.`,
-      readMoreBtn: "scienceCity",
+      readMoreBtn: "scienceCity1",
     },
   },
   {
@@ -65,7 +63,7 @@ export const BlogJson = [
     author: {
       name: "Saurabh Prajapati",
       location: "Ahmedabad",
-      date: "2023",
+      date: "2022-06-12",
     },
     image: {
       link: "assets/img/blog/githubstudent.png",
@@ -73,10 +71,8 @@ export const BlogJson = [
     contentHeader: {
       header: `The GitHub Student Developer Pack is one of the best resources that
         will get students start out as developers — Not only do you get free
-        access to all of GitHub’s pro features, such as private repositories,
-        you’ll also get access to over 20 different developer tools and
-        courses to keep you busy.`,
-      readMoreBtn: "githubStudentPack",
+        access to `,
+      readMoreBtn: "githubStudentPack1",
     },
   },
 ];

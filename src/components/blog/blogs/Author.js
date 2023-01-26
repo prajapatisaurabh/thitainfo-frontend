@@ -6,14 +6,14 @@ const Author = ({ user }) => {
       <ul>
         <li className="d-flex align-items-center">
           <i className="bi bi-person"></i>
-          <a href="#" rel="noreferrer" target="_blank">
+          <a href="#!" rel="noreferrer" target="_blank">
             {user.name}
           </a>
         </li>
         <li className="d-flex align-items-center">
           <i className="bi bi-clock"></i>
           <a href="#date">
-            <time datetime="2022-06-12">{user.date}</time>
+            <time dateTime="2022-06-12">{user.date}</time>
           </a>
         </li>
         <li className="d-flex align-items-center">
