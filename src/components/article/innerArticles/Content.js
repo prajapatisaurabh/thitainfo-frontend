@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CardBody,
   CardHeader,
@@ -13,6 +13,7 @@ import "./Content.css";
 import { productData } from "../Constant";
 import Example from "./component/Example";
 import Author from "./component/Author";
+import { Tabs, Tab } from "react-bootstrap";
 
 const Content = () => {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const Content = () => {
   const product = productData.find(
     (p) => String(p.articleName) === String(articleName)
   );
+  const [key, setKey] = useState("read");
   var renderdata;
   let listview = <></>;
   let list = <></>;
@@ -32,7 +34,6 @@ const Content = () => {
           <h1 className="font-monospace">{product.articleName}</h1>
           <Author author={product.artcleMetadata} />
         </section>
-        <hr />
       </>
     );
 
@@ -107,10 +108,17 @@ const Content = () => {
     <>
       <Container>
         {renderdata}
-        {description}
-        {listview}
-        {list}
-        {conclusion}
+        <Tabs activeKey={key} onSelect={(k) => setKey(k)} className="mb-3">
+          <Tab eventKey="read" title="Read">
+            {description}
+            {listview}
+            {list}
+            {conclusion}
+          </Tab>
+          <Tab eventKey="discuss" title="Discuss">
+            text2
+          </Tab>
+        </Tabs>
       </Container>
     </>
   );

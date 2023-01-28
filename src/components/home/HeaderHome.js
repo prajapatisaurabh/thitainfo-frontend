@@ -19,6 +19,7 @@ const HeaderHome = () => {
     { to: "/team", text: "Team", id: 1111 },
     { to: "/pricing", text: "Pricing", id: 11113 },
     { to: "/blog", text: "Blog", id: 11114 },
+    { to: "/code", text: "Code With Me", id: 11116 },
     { to: "/Articles", text: "Interview Preparation", id: 11115 },
   ];
   const createNavItem = ({ to, text, id }) => (

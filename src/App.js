@@ -15,6 +15,11 @@ import Blog from "./pages/Blog";
 import Blogs from "./components/blog/blogs/Blogs";
 import MyBlog from "./components/blog/MyBlog";
 
+// CodeWithMe
+import Code from "./components/codeWithMe/Code";
+import CodeQuestion from "./components/codeWithMe/CodeQuestion";
+import Question from "./components/codeWithMe/Question";
+
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
 
@@ -61,6 +66,10 @@ const App = () => {
         <Route path="/Articles" element={<ShowArticle />}>
           <Route path=":articleName" element={<Content />} />
         </Route>
+        <Route path="/code" element={<Code />}>
+          <Route path=":question" element={<CodeQuestion />} />
+        </Route>
+        <Route path="codes/:que" element={<Question />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
