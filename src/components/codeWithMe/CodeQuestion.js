@@ -24,7 +24,7 @@ const CodeQuestion = ({ navigateTo }) => {
           {questionList.questions.map((que, index) => (
             <tr
               onClick={() => {
-                navigate(`/codes/${que.id}`);
+                navigate(`/codes/${que.quid}`);
               }}
               style={{ cursor: "pointer" }}
               key={index}
