@@ -1537,6 +1537,28 @@ export const productData = [
     conclustion:
       "Please note that these features are not final and could change before the official release of Java 18.",
   },
+  {
+    articleId: "id30",
+    articleName: "Can we create static class in Java",
+    artcleMetadata: {
+      user: "saurabh prajapati",
+      date: "14 Jan 2023",
+      level: "Easy",
+    },
+    description: "First give answer of following question.",
+    hasListView: true,
+    ListView: [
+      {
+        header:
+          "Static keyword in java can not be used with in which of the below options?",
+        description: "1.variable\n2.method\n3.class\n4.nested class",
+      },
+    ],
+    hasList: false,
+    List: [],
+    conclustion:
+      "Please note that these features are not final and could change before the official release of Java 18.",
+  },
 ];
 
 export const TreeviewData = [
@@ -1618,6 +1640,16 @@ export const TreeviewData = [
       {
         id: "id8",
         label: "Java-18 Feature",
+      },
+    ],
+  },
+  {
+    id: 5,
+    label: "Java Interview Question",
+    children: [
+      {
+        id: "id6",
+        label: "Can we create static class in Java",
       },
     ],
   },
