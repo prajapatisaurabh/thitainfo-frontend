@@ -22,18 +22,7 @@ const TopBar = () => {
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink tag={Link} to="/Articles">
-                Articles
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="/blog">
-                Blogs
-              </NavLink>
-            </NavItem>
-          </Nav>
+          <Nav className="me-auto" navbar></Nav>
           <Nav>
             <NavItem className="pe-2">
               <Button outline>Login</Button>

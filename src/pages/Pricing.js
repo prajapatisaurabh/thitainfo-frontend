@@ -1,4 +1,6 @@
 import React from "react";
+import "../assets/css/Price.css";
+import { FaGem, FaPaperPlane, FaRocket } from "react-icons/fa";
 
 const Pricing = () => (
   <main id="main">
@@ -14,90 +16,94 @@ const Pricing = () => (
       </div>
     </section>
 
-    <section id="pricing" class="pricing">
+    <section class="pricing-section">
       <div class="container">
-        <div class="row no-gutters">
-          <div class="col-lg-4 box">
-            <h3>Free</h3>
-            <h4>
-              $0<span>per month</span>
-            </h4>
-            <ul>
-              <li>
-                <i class="bx bx-check"></i> Quam adipiscing vitae proin
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Nec feugiat nisl pretium
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Nulla at volutpat diam uteera
-              </li>
-              <li class="na">
-                <i class="bx bx-x"></i>{" "}
-                <span>Pharetra massa massa ultricies</span>
-              </li>
-              <li class="na">
-                <i class="bx bx-x"></i>{" "}
-                <span>Massa ultricies mi quis hendrerit</span>
-              </li>
-            </ul>
-            <a href="1" class="buy-btn">
-              Buy Now
-            </a>
-          </div>
+        <div class="sec-title text-center">
+          <h2>Choose a Plan</h2>
+        </div>
 
-          <div class="col-lg-4 box featured">
-            <h3>Business</h3>
-            <h4>
-              $29<span>per month</span>
-            </h4>
-            <ul>
-              <li>
-                <i class="bx bx-check"></i> Quam adipiscing vitae proin
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Nec feugiat nisl pretium
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Nulla at volutpat diam uteera
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Pharetra massa massa ultricies
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Massa ultricies mi quis hendrerit
-              </li>
-            </ul>
-            <a href="1" class="buy-btn">
-              Buy Now
-            </a>
-          </div>
+        <div class="outer-box">
+          <div class="row">
+            <div class="pricing-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+              <div class="inner-box">
+                <div class="icon-box">
+                  <div class="icon-outer">
+                    <FaPaperPlane />
+                  </div>
+                </div>
+                <div class="price-box">
+                  <div class="title">Free Pan</div>
+                  <h4 class="price">₹0</h4>
+                </div>
+                <ul class="features">
+                  <li class="true">Comming soon</li>
+                  <li class="true">Comming soon</li>
+                  <li class="false">Comming soon</li>
+                  <li class="false">Comming soon</li>
+                </ul>
+                <div class="btn-box">
+                  <a href="https://codepen.io/saurabh" class="theme-btn">
+                    BUY plan
+                  </a>
+                </div>
+              </div>
+            </div>
 
-          <div class="col-lg-4 box">
-            <h3>Developer</h3>
-            <h4>
-              $49<span>per month</span>
-            </h4>
-            <ul>
-              <li>
-                <i class="bx bx-check"></i> Quam adipiscing vitae proin
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Nec feugiat nisl pretium
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Nulla at volutpat diam uteera
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Pharetra massa massa ultricies
-              </li>
-              <li>
-                <i class="bx bx-check"></i> Massa ultricies mi quis hendrerit
-              </li>
-            </ul>
-            <a href="1" class="buy-btn">
-              Buy Now
-            </a>
+            <div
+              class="pricing-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+              data-wow-delay="400ms"
+            >
+              <div class="inner-box">
+                <div class="icon-box">
+                  <div class="icon-outer">
+                    <FaGem />
+                  </div>
+                </div>
+                <div class="price-box">
+                  <div class="title">Single Plan</div>
+                  <h4 class="price">₹200</h4>
+                </div>
+                <ul class="features">
+                  <li class="true">Comming soon</li>
+                  <li class="true">Comming soon</li>
+                  <li class="true">Comming soon</li>
+                  <li class="false">Comming soon</li>
+                </ul>
+                <div class="btn-box">
+                  <a href="https://codepen.io/saurabh" class="theme-btn">
+                    BUY plan
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="pricing-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+              data-wow-delay="800ms"
+            >
+              <div class="inner-box">
+                <div class="icon-box">
+                  <div class="icon-outer">
+                    <FaRocket />
+                  </div>
+                </div>
+                <div class="price-box">
+                  <div class="title">Organization Plan</div>
+                  <h4 class="price">₹2000</h4>
+                </div>
+                <ul class="features">
+                  <li class="true">Comming soon</li>
+                  <li class="true">Comming soon</li>
+                  <li class="true">Comming soon</li>
+                  <li class="true">Comming soon</li>
+                </ul>
+                <div class="btn-box">
+                  <a href="https://codepen.io/saurabh" class="theme-btn">
+                    BUY plan
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

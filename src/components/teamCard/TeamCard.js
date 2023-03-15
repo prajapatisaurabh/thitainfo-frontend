@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import {
   FaTwitter,
   FaFacebook,
@@ -9,30 +8,41 @@ import {
 
 const TeamCard = ({ obj }) => {
   return (
-    <Card border="danger" style={{ margin: "10px" }}>
-      <Card.Img variant="top" src={obj.img} height={385} />
-      <Card.Body className="text-center">
-        <Card.Title className="font-monospace fw-bolder">{obj.name}</Card.Title>
-        <Card.Subtitle className="text-muted fw-bolder">
-          {obj.role}
-        </Card.Subtitle>
-        <Card.Text className="fw-normal">{obj.disc}</Card.Text>
-        <Card.Footer>
-          <Card.Link href={obj.twitter}>
-            <FaTwitter />
-          </Card.Link>
-          <Card.Link href={obj.facebook}>
-            <FaFacebook />
-          </Card.Link>
-          <Card.Link href={obj.instagram}>
-            <FaInstagram />
-          </Card.Link>
-          <Card.Link href={obj.linkedin}>
-            <FaLinkedinIn />
-          </Card.Link>
-        </Card.Footer>
-      </Card.Body>
-    </Card>
+    <div className="col-md-4 col-sm-6 col-xs-12">
+      <div className="single-team">
+        <div className="img-area">
+          <img src={obj.img} className="img-responsive team-img" alt="" />
+          <div className="social">
+            <ul className="list-inline">
+              <li>
+                <a href={obj.facebook}>
+                  <FaFacebook />
+                </a>
+              </li>
+              <li>
+                <a href={obj.twitter}>
+                  <FaTwitter />
+                </a>
+              </li>
+              <li>
+                <a href={obj.instagram}>
+                  <FaInstagram />
+                </a>
+              </li>
+              <li>
+                <a href={obj.linkedin}>
+                  <FaLinkedinIn />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="img-text">
+          <h4> {obj.name}</h4>
+          <h5>{obj.role}</h5>
+        </div>
+      </div>
+    </div>
   );
 };
 

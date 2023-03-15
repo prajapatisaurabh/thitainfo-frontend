@@ -4,9 +4,22 @@ import { useParams } from "react-router-dom";
 const Question = () => {
   const { que } = useParams();
   return (
-    <div>
-      <h1>New,{que}</h1>
-    </div>
+    <>
+      <section id="breadcrumbs" className="breadcrumbs">
+        <div className="container">
+          <ol>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>Code With Me</li>
+          </ol>
+          <h2>Code With Me</h2>
+        </div>
+      </section>
+      <div>
+        <h1>New,{que}</h1>
+      </div>
+    </>
   );
 };
 

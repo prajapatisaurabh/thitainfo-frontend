@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import TeamCard from "../components/teamCard/TeamCard";
-import { CardGroup, Container } from "react-bootstrap";
 const Team = () => {
   const TeamInfo = [
     {
@@ -21,9 +20,9 @@ const Team = () => {
       disc: " Highly qualified and creative software engineer with experience in the industry. I would excel in the collaborative environment with cutting edge technology and modern cloud environment",
       img: "assets/img/team/team-2.png",
       linkedin: "https://www.linkedin.com/in/pradipsodha",
-      twitter: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
-      instagram: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
-      facebook: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
+      twitter: "https://www.linkedin.com/in/pradipsodha",
+      instagram: "https://www.linkedin.com/in/pradipsodha",
+      facebook: "https://www.linkedin.com/in/pradipsodha",
     },
     {
       id: 3,
@@ -32,9 +31,9 @@ const Team = () => {
       disc: " Highly qualified and creative software engineer with experience in the industry. I would excel in the collaborative environment with cutting edge technology and modern cloud environment",
       img: "assets/img/team/team-3.jpg",
       linkedin: "https://www.linkedin.com/in/ysprajapati/",
-      twitter: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
-      instagram: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
-      facebook: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
+      twitter: "https://www.linkedin.com/in/ysprajapati/",
+      instagram: "https://www.linkedin.com/in/ysprajapati/",
+      facebook: "https://www.linkedin.com/in/ysprajapati/",
     },
   ];
 
@@ -54,13 +53,22 @@ const Team = () => {
       </section>
 
       <section id="team" className="team">
-        <Container>
+        <div className="team-area">
+          <div className="container">
+            <div className="row">
+              {team.map((obj) => (
+                <TeamCard obj={obj} />
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* <Container>
           <CardGroup>
             {team.map((obj) => (
               <TeamCard obj={obj} />
             ))}
           </CardGroup>
-        </Container>
+        </Container> */}
       </section>
     </main>
   );

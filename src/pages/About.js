@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BiCheckCircle } from "react-icons/bi";
 
 const About = () => (
   <main id="main">
@@ -22,41 +23,44 @@ const About = () => (
           </div>
           <div className="col-lg-6 pt-4 pt-lg-0 content">
             <h3>
-              We build software solutions using emerging technologies for
-              startups and enterprises.
+              We create software solutions using new technologies for both small
+              businesses and larger companies.
             </h3>
-            <p className="fst-italic">
-              Our goal is to help companies adopt new technologies and simplify
-              complicated issues that arise during technology evolution. We
-              excel in AI/ML, Web Development, IoT, cloud and mobile.
+            <p>
+              We strive to assist companies in embracing new technologies and
+              simplifying complex problems that can arise during technological
+              advancements. We specialize in AI/ML, Web Development, IoT, cloud
+              and mobile technologies.
             </p>
             <ul>
               <li>
-                <i className="bi bi-check-circle"></i> Our mission is to help
-                our clients make distinctive, lasting and substantial
-                improvements in their performance and to build a great firm that
-                attracts, develops, excites and retains exceptional people.
+                <BiCheckCircle />
+                Our mission is to help our clients achieve significant and
+                lasting performance improvements, while also building a great
+                company that attracts, develops, and retains exceptional people
               </li>
               <li>
-                <i className="bi bi-check-circle"></i> We are a global family
-                that values diversity; We always do the right thing. With
-                precision, pace and passion; We trust each other and have fun
-                winning together; We own and shape our future; We create
-                sustainable growth; For All.
+                <BiCheckCircle /> We are a diverse global family that
+                prioritizes doing the right thing with precision, pace, and
+                passion. We trust and enjoy winning together, taking ownership
+                and shaping our future while creating sustainable growth for all
               </li>
               <li>
-                <i className="bi bi-check-circle"></i> Our vision serves as the
-                framework for our Roadmap and guides every aspect of our
-                business by describing what we need to accomplish in order to
-                continue achieving sustainable, quality growth.
+                <BiCheckCircle /> Our vision guides every aspect of our business
+                and outlines what we need to accomplish to achieve sustainable,
+                high-quality growth.
               </li>
             </ul>
             <p>
-              <Link to="/">ThitaInfo</Link> is a team that has a passion for
-              developing and delivering enterprise-grade applications Holding
-              the experience of working with 2+ we have developed applications
-              that are now being used by millions of consumers worldwide . We
-              understand how to build successful software products.
+              <Link to="/">ThitaInfo</Link> Thita is a dedicated team with a
+              passion for developing and delivering enterprise-grade
+              applications. With over 2+ years of experience, we have developed
+              applications that are now being used by millions of consumers
+              worldwide. We pride ourselves on understanding how to build
+              successful software products that not only meet our clients' needs
+              but also exceed their expectations. Our team's expertise and
+              commitment to quality enable us to deliver reliable and scalable
+              solutions to businesses of all sizes.
             </p>
           </div>
         </div>

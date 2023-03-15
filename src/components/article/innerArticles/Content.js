@@ -3,7 +3,6 @@ import {
   CardBody,
   CardHeader,
   CardText,
-  Container,
   ListGroup,
   ListGroupItem,
   Card,
@@ -88,7 +87,7 @@ const Content = () => {
   } else {
     renderdata = (
       <>
-        <ListGroup flush numbered>
+        <ListGroup flush numbered className="list-group">
           {productData.slice(0, 2).map((prod, index) => (
             <ListGroupItem
               key={index}
@@ -106,20 +105,18 @@ const Content = () => {
   }
   return (
     <>
-      <Container>
-        {renderdata}
-        <Tabs activeKey={key} onSelect={(k) => setKey(k)} className="mb-3">
-          <Tab eventKey="read" title="Read">
-            {description}
-            {listview}
-            {list}
-            {conclusion}
-          </Tab>
-          <Tab eventKey="discuss" title="Discuss">
-            text2
-          </Tab>
-        </Tabs>
-      </Container>
+      {renderdata}
+      <Tabs activeKey={key} onSelect={(k) => setKey(k)} className="mb-3">
+        <Tab eventKey="read" title="Read">
+          {description}
+          {listview}
+          {list}
+          {conclusion}
+        </Tab>
+        <Tab eventKey="discuss" title="Discuss">
+          text2
+        </Tab>
+      </Tabs>
     </>
   );
 };

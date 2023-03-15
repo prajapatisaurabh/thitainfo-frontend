@@ -9,7 +9,7 @@ const Code = () => {
   const navigate = useNavigate();
   const { question } = useParams();
   return (
-    <Row>
+    <Row style={{ marginTop: "90px" }}>
       <Col className="bg-light" xs="3">
         <ListGroup flush numbered>
           {codeData.map((cd, index) => (

@@ -3,6 +3,7 @@ import { BlogJson } from "./ConstantBlog";
 import Images from "./blogs/Images";
 import Author from "./blogs/Author";
 import EntryContent from "./blogs/EntryContent";
+import "./blogs/MyBlog.css";
 
 // Here Is link for Auto Place Geid Layout
 // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout

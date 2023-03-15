@@ -1,5 +1,8 @@
 import React from "react";
 import ServiceSection from "../services/ServicesSection";
+import { VscGitPullRequestCreate } from "react-icons/vsc";
+import { FaBinoculars } from "react-icons/fa";
+import { BsFillBarChartFill } from "react-icons/bs";
 
 const Main = () => {
   return (
@@ -10,8 +13,11 @@ const Main = () => {
             <div className="col-lg-4">
               <div className="icon-box">
                 <div className="row">
-                  <div className="col-lg-2">
-                    <i className="bi bi-card-checklist"></i>
+                  <div
+                    style={{ paddingTop: "8px", paddingLeft: "13px" }}
+                    className="col-lg-2"
+                  >
+                    <VscGitPullRequestCreate size={30} />
                   </div>
                   <div className="col-lg-6">
                     <h1>Create</h1>
@@ -32,8 +38,11 @@ const Main = () => {
             <div className="col-lg-4 mt-4 mt-lg-0">
               <div className="icon-box">
                 <div className="row">
-                  <div className="col-lg-2">
-                    <i className="bi bi-bar-chart"></i>
+                  <div
+                    style={{ paddingTop: "11px", paddingLeft: "13px" }}
+                    className="col-lg-2"
+                  >
+                    <BsFillBarChartFill size={30} />
                   </div>
                   <div className="col-lg-6">
                     <h1>Communicate</h1>
@@ -53,8 +62,11 @@ const Main = () => {
             <div className="col-lg-4 mt-4 mt-lg-0">
               <div className="icon-box">
                 <div className="row">
-                  <div className="col-lg-2">
-                    <i className="bi bi-binoculars"></i>
+                  <div
+                    style={{ paddingTop: "11px", paddingLeft: "13px" }}
+                    className="col-lg-2"
+                  >
+                    <FaBinoculars size={30} />
                   </div>
                   <div className="col-lg-6">
                     <h1>Connect</h1>

@@ -15,6 +15,7 @@ const TreeNode = ({ data }) => {
       <div
         onClick={handleCollapsed}
         style={{ marginBottom: "10px", cursor: "pointer" }}
+        className="index-setting"
       >
         <span
           onClick={() => {

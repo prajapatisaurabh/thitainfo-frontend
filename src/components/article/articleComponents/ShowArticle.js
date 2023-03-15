@@ -11,7 +11,7 @@ import Tree from "../innerArticles/component/Tree";
 const ShowArticle = () => {
   return (
     <>
-      <Row>
+      <Row style={{ marginTop: "90px", color: "black" }}>
         <Col className="bg-light" xs="3">
           <Tree treeData={TreeviewData} />
         </Col>
