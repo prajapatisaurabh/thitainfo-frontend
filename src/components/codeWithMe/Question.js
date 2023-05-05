@@ -13,7 +13,6 @@ const Question = () => {
             </li>
             <li>Code With Me</li>
           </ol>
-          <h2>Code With Me</h2>
         </div>
       </section>
       <div>

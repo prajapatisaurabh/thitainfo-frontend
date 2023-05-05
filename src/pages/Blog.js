@@ -15,11 +15,7 @@ const Blog = () => (
       </div>
     </section>
 
-    <section id="blog" className="blog">
-      <Container>
-        <MyBlog />
-      </Container>
-    </section>
+    <MyBlog />
   </main>
 );
 

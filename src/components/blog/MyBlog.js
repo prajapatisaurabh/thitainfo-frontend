@@ -1,34 +1,35 @@
 import React from "react";
+import { Card, Button } from "react-bootstrap";
+import "./blogs/MyBlog.css"; // Import the CSS file
+
 import { BlogJson } from "./ConstantBlog";
-import Images from "./blogs/Images";
-import Author from "./blogs/Author";
-import EntryContent from "./blogs/EntryContent";
-import "./blogs/MyBlog.css";
 
-// Here Is link for Auto Place Geid Layout
-// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-
-const MyBlog = () => {
+function MyBlog() {
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "10px",
-      }}
-    >
-      {BlogJson.map((blog, index) => (
-        <article key={index} id="sciencecity" className="entry">
-          <Images img={blog.image} />
-          <h2 className="entry-title">
-            <a href="#blog-single.html">{blog.name}</a>
-          </h2>
-          <Author user={blog.author} />
-          <EntryContent blogInfo={blog.contentHeader} />
-        </article>
+    <div className="my-blog-container">
+      {/* Add a class to the container */}
+      {BlogJson.map((blog) => (
+        <Card key={blog.id} className="my-blog-card">
+          {" "}
+          {/* Add a class to the Card component */}
+          <Card.Img variant="top" src={blog.image.link} />
+          <Card.Body>
+            <Card.Title>{blog.name}</Card.Title>
+            <Card.Text>{blog.contentHeader.header}</Card.Text>
+            <Button variant="primary" href={blog.contentHeader.readMoreBtn}>
+              Read More
+            </Button>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">
+              By {blog.author.name}, {blog.author.location} on{" "}
+              {blog.author.date}
+            </small>
+          </Card.Footer>
+        </Card>
       ))}
     </div>
   );
-};
+}
 
 export default MyBlog;
