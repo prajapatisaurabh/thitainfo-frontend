@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BiCheckCircle } from "react-icons/bi";
+import { Container, Row, Col } from "react-bootstrap";
+import "../assets/css/About.css";
 
 const About = () => (
   <main id="main">
@@ -12,27 +14,30 @@ const About = () => (
           </li>
           <li>About Us</li>
         </ol>
-        <h2>About Us</h2>
       </div>
     </section>
     <section id="about" className="about">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6">
-            <img src="assets/img/about.jpg" className="img-fluid" alt="" />
-          </div>
-          <div className="col-lg-6 pt-4 pt-lg-0 content">
-            <h3>
+      <Container>
+        <Row>
+          <Col lg={6}>
+            <img
+              src="assets/img/about.jpg"
+              className="img-fluid"
+              alt="about us"
+            />
+          </Col>
+          <Col lg={6} className="pt-4 pt-lg-0 content">
+            <h3 className="title">
               We create software solutions using new technologies for both small
               businesses and larger companies.
             </h3>
-            <p>
+            <p className="description">
               We strive to assist companies in embracing new technologies and
               simplifying complex problems that can arise during technological
               advancements. We specialize in AI/ML, Web Development, IoT, cloud
               and mobile technologies.
             </p>
-            <ul>
+            <ul className="checklist">
               <li>
                 <BiCheckCircle />
                 Our mission is to help our clients achieve significant and
@@ -51,7 +56,7 @@ const About = () => (
                 high-quality growth.
               </li>
             </ul>
-            <p>
+            <p className="description">
               <Link to="/">ThitaInfo</Link> Thita is a dedicated team with a
               passion for developing and delivering enterprise-grade
               applications. With over 2+ years of experience, we have developed
@@ -62,9 +67,9 @@ const About = () => (
               commitment to quality enable us to deliver reliable and scalable
               solutions to businesses of all sizes.
             </p>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   </main>
 );

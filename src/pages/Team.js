@@ -48,7 +48,6 @@ const Team = () => {
             </li>
             <li>Team</li>
           </ol>
-          <h2>Team</h2>
         </div>
       </section>
 
@@ -62,13 +61,6 @@ const Team = () => {
             </div>
           </div>
         </div>
-        {/* <Container>
-          <CardGroup>
-            {team.map((obj) => (
-              <TeamCard obj={obj} />
-            ))}
-          </CardGroup>
-        </Container> */}
       </section>
     </main>
   );

@@ -1,0 +1,114 @@
+/* Navbar background */
+.navbar {
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo */
+.navbar-brand img {
+  max-width: 150px;
+}
+
+/* Active Navbar link */
+.navbar-link.active {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Navbar dropdown link */
+.navbar-link.dropdown-item {
+  font-size: 16px;
+}
+
+/* Navbar dropdown hover background */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Scrolled Navbar background */
+.scrolled {
+  background-color: #f5f5f5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Login button */
+.vvd {
+  background-color: #ffffff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Login button hover effect */
+.vvd:hover {
+  background-color: #ffffff;
+}
+
+/* Navbar toggle button */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Navbar toggle icon */
+.navbar-toggler-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Mobile Navbar links */
+.navbar-nav {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Mobile Navbar link separator */
+.navbar-nav .nav-link {
+  padding: 10px 0;
+  color: #000;
+  font-size: 16px;
+}
+
+/* Mobile Navbar toggle background */
+.navbar-toggler {
+  background-color: #fff;
+}
+
+/* Mobile Navbar toggle icon color */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Mobile Navbar logo size */
+@media (max-width: 767px) {
+  .navbar-brand img {
+    max-width: 100px;
+  }
+}
+
+/* Mobile Navbar dropdown */
+.dropdown-menu {
+  position: static;
+  display: none;
+  float: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.dropdown-menu a {
+  color: #000;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

@@ -12,7 +12,6 @@ const Pricing = () => (
           </li>
           <li>Pricing</li>
         </ol>
-        <h2>Pricing</h2>
       </div>
     </section>
 

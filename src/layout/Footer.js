@@ -3,150 +3,100 @@ import { Link } from "react-router-dom";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import "./Footer.css";
 
-import {
-  LINKEDIN_URL,
-  FACEBOOK_URL,
-  TWITTER_URL,
-  INSTAGRAM_URL,
-  SKYPE_URL,
-  YOUTUBE_URL,
-} from "../constrains/Constant";
+import { INSTAGRAM_URL, YOUTUBE_URL } from "../constrains/Constant";
 
 const Footer = () => {
   let year = new Date().getFullYear();
   return (
     <footer id="footer">
-      <div className="footer-top">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                  <Link to="/" className="active">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                  <Link to="/service">Services</Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                  <Link to="/team">Team</Link>
-                  {/* <a href="4">Terms of service</a> */}
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                  <Link to="/blog">Blog</Link>
-                </li>
-              </ul>
-            </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <h4>Useful Links</h4>
+            <ul className="list-unstyled">
+              <li>
+                <Link to="/" className="text-decoration-none text-white">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-decoration-none text-white">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/service" className="text-decoration-none text-white">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="text-decoration-none text-white">
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-decoration-none text-white">
+                  Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            <div className="col-lg-3 col-md-6 footer-links">
-              <h4>Our Services</h4>
-              <ul>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                  <Link to="/service">Web Design</Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                  <Link to="/service">Web Development</Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>{" "}
-                  <Link to="/service">Product Management</Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                  <Link to="/service">Marketing</Link>
-                </li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                  <Link to="/service">Graphic Design</Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                <a style={{ color: "white" }} href={INSTAGRAM_URL}>
-                  <span style={{ paddingRight: "10px" }}>Instagram</span>
-                  <FaInstagram size={18} />
-                </a>
-                <br />
-                <a style={{ color: "white" }} href={YOUTUBE_URL}>
-                  <span style={{ paddingRight: "10px" }}>Youtube</span>
-                  <FaYoutube size={18} />
-                </a>
-                <br />
-                <br />
-                <strong>Phone:</strong> +91 81402 02047
-                <br />
-                <strong>Email:</strong>
+          <div className="col-md-4">
+            <h4>Contact Us</h4>
+            <ul className="list-unstyled">
+              <li>
                 <a
-                  style={{ color: "white", paddingLeft: "10px" }}
-                  href="mailto:saurabhprajapati@gmail.com"
+                  href={INSTAGRAM_URL}
+                  className="text-decoration-none text-white"
                 >
-                  saurabhprajapati120.@gmail.com
+                  <FaInstagram size={18} className="me-2" /> Instagram
                 </a>
-                <br />
-              </p>
-            </div>
+              </li>
+              <li>
+                <a
+                  href={YOUTUBE_URL}
+                  className="text-decoration-none text-white"
+                >
+                  <FaYoutube size={18} className="me-2" /> Youtube
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+918140202047"
+                  className="text-decoration-none text-white"
+                >
+                  <i className="bi bi-telephone-fill me-2"></i> +91 81402 02047
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:saurabhprajapati120.@gmail.com"
+                  className="text-decoration-none text-white"
+                >
+                  <i className="bi bi-envelope-fill me-2"></i>{" "}
+                  saurabhprajapati120@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
 
-            <div className="col-lg-3 col-md-6 footer-info">
-              <h3>About Thita Info</h3>
-              <p>
-                Thita info new launched software development company that
-                provides easy and cost effective for your business to take it
-                online.
-              </p>
-              <div className="social-links mt-3">
-                <a href={TWITTER_URL} className="twitter">
-                  <i className="bx bxl-twitter"></i>
-                </a>
-                <a href={FACEBOOK_URL} className="facebook">
-                  <i className="bx bxl-facebook"></i>
-                </a>
-                <a href={INSTAGRAM_URL} className="instagram">
-                  <i className="bx bxl-instagram"></i>
-                </a>
-                <a href={SKYPE_URL} className="google-plus">
-                  <i className="bx bxl-skype"></i>
-                </a>
-                <a href={LINKEDIN_URL} target="_black" className="linkedin">
-                  <i className="bx bxl-linkedin"></i>
-                </a>
-              </div>
-            </div>
+          <div className="col-md-4">
+            <h4>About Us</h4>
+            <p>
+              Thita Info is a new software development company that provides
+              easy and cost-effective solutions for businesses to go online.
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="container">
-        <div className="copyright">
-          {year}-{year + 1} &copy; Copyright{" "}
-          <strong>
-            <span>Thita</span>
-          </strong>
-          . All Rights Reserved
-        </div>
-        <div className="credits">
-          Designed by{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://saurabh-saurabh.github.io/saurabhprajapati"
-          >
-            Thita Info
-          </a>
+      <div className="container py-3">
+        <div className="text-center">
+          <p className="mb-0">
+            &copy; {year}-{year + 1} Thita. All Rights Reserved.
+          </p>
+          <p className="mb-0">Designed by Thita Info</p>
         </div>
       </div>
     </footer>

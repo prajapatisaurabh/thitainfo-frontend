@@ -1,0 +1,141 @@
+/* Contact section styles */
+.contact {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+
+/* Contact info styles */
+.contact-us {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.contact-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-us-info {
+  margin-bottom: 40px;
+}
+
+.contact-us-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-us-info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.contact-us-info-text p {
+  margin: 0;
+  color: #333 !important;
+}
+
+/* Contact form styles */
+.contact-us-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-us-form-header {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333 !important;
+  text-align: center;
+}
+
+.contact-us-form-group {
+  margin-bottom: 20px;
+}
+
+.contact-us-form input[type="text"],
+.contact-us-form input[type="email"],
+.contact-us-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact-us-form textarea {
+  height: 150px;
+}
+
+.contact-us-form button[type="submit"] {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-us-form button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .contact-us-content {
+    padding: 0 20px;
+  }
+
+  .contact-us-info-item {
+    width: 100%;
+  }
+
+  .contact-us-form-header {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .contact-us-form input[type="text"],
+  .contact-us-form input[type="email"],
+  .contact-us-form textarea {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contact-us-info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .contact-us-info-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .contact-us-form-header {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .contact-us-form input[type="text"],
+  .contact-us-form input[type="email"],
+  .contact-us-form textarea {
+    font-size: 16px;
+  }
+}

@@ -3,6 +3,8 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import axios from "axios";
+
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Home from "./pages/Home";
@@ -42,22 +44,26 @@ const App = () => {
       setIsLoading(false);
     }, 1000);
   }, []);
+
   useEffect(() => {
-    // const loginRequest = Object.assign(
-    //   {},
-    //   { email: "thita@gmail.com", password: "thita" }
-    // );
-    // login(loginRequest)
-    //   .then((response) => {
-    //     localStorage.setItem(ACCESS_TOKEN, response.accessToken);
-    //     console.log("You're successfully logged in!");
-    //   })
-    //   .catch((error) => {
-    //     console.log(
-    //       (error && error.message) ||
-    //         "Oops! Something went wrong. Please try again!"
-    //     );
-    //   });
+    const signIn = async () => {
+      try {
+        const response = await axios.post(
+          "http://localhost:8080/api/auth/signin",
+          {
+            username: "admin",
+            password: "admin@123",
+          },
+          {
+            withCredentials: true,
+          }
+        );
+        console.log("response: " + response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    signIn();
   }, []);
   return (
     <>

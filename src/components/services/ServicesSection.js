@@ -1,111 +1,76 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
+import "./ServiceSection.css";
 
-const ServicesSection = () => {
+const servicesData = [
+  {
+    icon: "bx bxl-dribbble",
+    title: "Website Design",
+    description:
+      "Interact with your customers with a great looking website that is easy-to-use and simple to edit with our website design services.",
+    link: "/products",
+  },
+  {
+    icon: "bx bx-file",
+    title: "Mobile App Development",
+    description:
+      "We are developing mobile experiences that serve the unique needs of your target audience by mobile application development.",
+    link: "/products",
+  },
+
+  {
+    icon: "bx bx-slideshow",
+    title: "Digital Marketing",
+    description:
+      "We provide our clients with a strong creative digital marketing presence, through strategy, positioning and conversion.",
+    link: "/products",
+  },
+  {
+    icon: "bx bx-world",
+    title: "Social Media Marketing",
+    description:
+      "By using the power of social media interact with your customers in a way that would never before have been possible with creative social media marketing services.",
+    link: "/products",
+  },
+  {
+    icon: "bx bx-arch",
+    title: "Graphics & Design",
+    description:
+      "Coming soon ... Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur",
+    link: "/products",
+  },
+  {
+    icon: "bx bx-tachometer",
+    title: "Software Development",
+    description:
+      "Our custom software development services to help your business run more efficiently. We measure, analyse and iterate to ensure your systems remain relevant and effective for users.",
+    link: "/products",
+  },
+];
+
+const ServiceSection = () => {
   return (
     <section id="services" className="services">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bxl-dribbble"></i>
+      <Container>
+        <Row>
+          {servicesData.map((service, index) => (
+            <Col lg={4} md={6} key={index}>
+              <div className="icon-box">
+                <div className="icon">
+                  <i className={service.icon}></i>
+                </div>
+                <h4>
+                  <Link to={service.link}>{service.title}</Link>
+                </h4>
+                <p>{service.description}</p>
               </div>
-              <h4>
-                <Link to="/products">Website design</Link>
-              </h4>
-              <p>
-                Interact with your customers with a great looking website that
-                is easy-to-use and simple to edit with our
-                <strong>website design services</strong>.<br />
-                <br />
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bx-file"></i>
-              </div>
-              <h4>
-                <Link to="/products">Mobile App Development</Link>
-              </h4>
-              <p>
-                We are developing mobile experiences that serve the unique needs
-                of your target audience by{" "}
-                <strong>mobile application development</strong>.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bx-tachometer"></i>
-              </div>
-              <h4>
-                <Link to="/products">Software Development</Link>
-              </h4>
-              <p>
-                Our custom <strong>software development services</strong> to
-                help your business run more efficiently. We measure, analyses
-                and iterate to ensure your systems remain relevant and effective
-                for users.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bx-world"></i>
-              </div>
-              <h4>
-                <Link to="/products">Social Media Marketing</Link>
-              </h4>
-              <p>
-                By using the power of social media interact with your customers
-                in a way that would never before have been possible with
-                creative <strong>social media marketing services</strong>.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bx-slideshow"></i>
-              </div>
-              <h4>
-                <Link to="/products">Digital Marketing</Link>
-              </h4>
-              <p>
-                We provide our clients with a strong creative{" "}
-                <strong>digital marketing</strong> presence, through strategy,
-                positioning and conversion.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div className="icon-box">
-              <div className="icon">
-                <i className="bx bx-arch"></i>
-              </div>
-              <h4>
-                <Link to="/products">Graphics & Design</Link>
-              </h4>
-              <p>
-                Comming soon ... Modi nostrum vel laborum. Porro fugit error sit
-                minus sapiente sit aspernatur
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </section>
   );
 };
 
-export default ServicesSection;
+export default ServiceSection;

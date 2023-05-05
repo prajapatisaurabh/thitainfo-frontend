@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import logo from "./../assets/img/logo.png";
-
-import HeaderHome from "../components/home/HeaderHome";
-import TopBar from "../components/home/TopBar";
+import "./Header.css";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -44,6 +42,14 @@ const Header = () => {
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
+              onClick={() => onUpdateActiveLink("")}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              className={
+                activeLink === "home" ? "active navbar-link" : "navbar-link"
+              }
               onClick={() => onUpdateActiveLink("about")}
             >
               About
@@ -63,14 +69,6 @@ const Header = () => {
               onClick={() => onUpdateActiveLink("team")}
             >
               Team
-            </Nav.Link>
-            <Nav.Link
-              className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("pricing")}
-            >
-              Pricing
             </Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item
@@ -104,22 +102,23 @@ const Header = () => {
                 Interview Preparation
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link
+              className={
+                activeLink === "projects" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("contact")}
+            >
+              Contact Us
+            </Nav.Link>
           </Nav>
           <span className="navbar-text">
             <button className="vvd">
               <span>Login</span>
             </button>
-            <button className="vvd">
-              <span>Signin</span>
-            </button>
           </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    // <div>
-    //   <TopBar />
-    //   <HeaderHome />
-    // </div>
   );
 };
 

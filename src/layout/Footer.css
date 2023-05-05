@@ -1,110 +1,43 @@
 #footer {
-  background: #0e0a0a;
-  padding: 0 0 30px 0;
+  background-color: #16191d;
   color: #fff;
-  font-size: 14px;
+  padding-top: 20px;
 }
-#footer .footer-top {
-  background: #0e0a0a;
-  border-top: 1px solid #474747;
-  border-bottom: 1px solid #474747;
-  padding: 60px 0 30px 0;
+
+#footer h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
-#footer .footer-top .footer-info {
-  margin-bottom: 30px;
+
+#footer ul {
+  list-style: none;
+  padding-left: 0;
 }
-#footer .footer-top .footer-info h3 {
-  font-size: 18px;
-  margin: 0 0 20px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-weight: 700;
+
+#footer ul li {
+  margin-bottom: 0.5rem;
 }
-#footer .footer-top .footer-info p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
-  color: #fff;
-}
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #545454;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-#footer .footer-top .social-links a:hover {
-  background: #a148c4;
+
+#footer a {
   color: #fff;
   text-decoration: none;
 }
-#footer .footer-top h4 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 12px;
-}
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 1;
-}
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-#footer .footer-top .footer-links ul a {
-  color: #fff;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-#footer .footer-top .footer-links ul a:hover {
-  color: #8042b9;
-}
-#footer .footer-top .footer-contact {
-  margin-bottom: 30px;
-}
-#footer .footer-top .footer-contact p {
-  line-height: 26px;
-}
-#footer .copyright {
-  text-align: center;
-  padding-top: 30px;
-}
-#footer .credits {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: #fff;
+
+#footer a:hover {
+  text-decoration: underline;
 }
 
-#footer .credits a {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: #fff;
+#footer p {
+  margin-bottom: 0;
+}
+
+#footer .container.py-3 {
+  border-top: 1px solid #5a6268;
+}
+
+@media (max-width: 767px) {
+  #footer .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

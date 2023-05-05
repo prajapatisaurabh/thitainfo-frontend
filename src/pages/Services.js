@@ -13,7 +13,6 @@ const Services = () => (
           </li>
           <li>Services</li>
         </ol>
-        <h2>Services</h2>
       </div>
     </section>
 
