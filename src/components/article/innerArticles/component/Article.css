@@ -1,0 +1,223 @@
+/* DiscussTab */
+.discussion-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+form {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+}
+button {
+  background-color: #0077cc;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.comment-list li {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+  textarea {
+    height: 100px;
+  }
+}
+
+/* ReadTab */
+.read-tab {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.article-description {
+  margin-bottom: 20px;
+}
+
+.conclusion {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* ProductList */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-list__item {
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #212529;
+  background-color: #fff;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+/* Example */
+.exampleOutput {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+pre {
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 20px;
+}
+
+pre span {
+  color: #f8f8f2;
+}
+
+.token.tag {
+  color: #ff79c6;
+}
+
+.token.keyword {
+  color: #ff79c6;
+}
+
+.token.attr-name {
+  color: #50fa7b;
+}
+
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+/* DiscussTab */
+
+.discussTab {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin-top: 20px;
+}
+
+/* Author */
+
+.authorInfo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.authorName {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.articleDate,
+.difficultyLevel {
+  margin-left: 10px;
+}
+
+/* ArticleListView */
+
+.listviewHeader {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.listviewDescription {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* ArticleList */
+
+.listgroupDetails {
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.listgroupTitle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.listgroupExample {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* ArticleHeader */
+
+.HeaderSection {
+  background-color: #f5f5f5;
+  padding: 1rem;
+}
+
+.headerTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.author {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #777;
+}

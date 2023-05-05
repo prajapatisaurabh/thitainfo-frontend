@@ -1,3 +1,25 @@
+.article-row {
+  margin-top: 90px;
+  color: black;
+  font-family: "Open Sans";
+}
+
+.tree-col,
+.content-col,
+.main-col,
+.index-col {
+  background-color: #f8f9fa;
+}
+
+.tree-col {
+  height: 100%;
+}
+
+.index-col {
+  position: sticky;
+  top: 90px;
+}
+
 .listGroupDetails {
   border: none;
   background-color: #f8f9fa;

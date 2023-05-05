@@ -1,28 +1,24 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
-// css
-import "./article.css";
 import { TreeviewData } from "../Constant";
-// Import 3 core
 import Content from "../innerArticles/Content";
 import ContentIndex from "../innerArticles/ContentIndex";
 import Tree from "../innerArticles/component/Tree";
+import "./article.css";
 
 const ShowArticle = () => {
   return (
     <>
-      <Row
-        style={{ marginTop: "90px", color: "black", fontFamily: "Open Sans" }}
-      >
-        <Col className="bg-light" xs="3">
+      <Row className="article-row">
+        <Col className="tree-col" xs="3">
           <Tree treeData={TreeviewData} />
         </Col>
-        <Col className="bg-light" xs="9">
+        <Col className="content-col" xs="9">
           <Row>
-            <Col className="bg-light" xs="9">
+            <Col className="main-col" xs="9">
               <Content />
             </Col>
-            <Col className="bg-light" xs="3">
+            <Col className="index-col" xs="3">
               <ContentIndex />
             </Col>
           </Row>

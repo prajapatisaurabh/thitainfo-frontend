@@ -1,6 +1,6 @@
 import React from "react";
 import { CopyBlock, a11yDark, atomOneDark } from "react-code-blocks";
-import "../Content.css";
+import "./Article.css";
 
 const Example = ({ hasExample, examples }) => {
   let example;
@@ -10,8 +10,8 @@ const Example = ({ hasExample, examples }) => {
     if (examples.output) {
       output = (
         <>
-          <p className="strick">
-            <span>Output OR Explanation</span>
+          <p className="exampleOutput">
+            <span>Output or Explanation</span>
           </p>
           <div>
             <CopyBlock text={examples.output} theme={atomOneDark} />
