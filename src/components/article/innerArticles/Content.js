@@ -8,11 +8,12 @@ import {
   Card,
 } from "reactstrap";
 import { useParams, useNavigate } from "react-router-dom";
-import "./Content.css";
 import { productData } from "../Constant";
 import Example from "./component/Example";
 import Author from "./component/Author";
 import { Tabs, Tab } from "react-bootstrap";
+
+import "./Content.css";
 
 const Content = () => {
   const navigate = useNavigate();
@@ -21,25 +22,35 @@ const Content = () => {
     (p) => String(p.articleName) === String(articleName)
   );
   const [key, setKey] = useState("read");
-  var renderdata;
-  let listview = <></>;
-  let list = <></>;
-  let conclusion = <></>;
-  let description = <></>;
+
+  let listview = null;
+  let list = null;
+  let conclusion = null;
+  let description = null;
+
   if (product) {
-    renderdata = (
-      <>
-        <section className="HeaderSection p-0">
-          <h1 className="font-monospace">{product.articleName}</h1>
-          <Author author={product.artcleMetadata} />
-        </section>
-      </>
+    const {
+      articleName,
+      artcleMetadata,
+      hasListView,
+      ListView,
+      hasList,
+      List,
+      description: articleDescription,
+      conclustion,
+    } = product;
+
+    const renderdata = (
+      <section className="HeaderSection p-0">
+        <h1 className="font-monospace">{articleName}</h1>
+        <Author author={artcleMetadata} />
+      </section>
     );
 
-    if (product.hasListView) {
+    if (hasListView) {
       listview = (
         <section className="p-0">
-          {product.ListView.map((prod, index) => (
+          {ListView.map((prod, index) => (
             <Card outline className="my-2" key={index}>
               <CardHeader tag="h5">{prod.header}</CardHeader>
               <CardBody>
@@ -50,42 +61,57 @@ const Content = () => {
         </section>
       );
     }
-    if (product.hasList) {
+
+    if (hasList) {
       list = (
-        <section className="p-0 ">
+        <section className="p-0">
           <ListGroup flush numbered>
-            {product.List.map((prod, index) => (
-              <>
-                <Card key={index} className="listgroupDetails">
-                  <CardBody>
-                    <CardText>
-                      {index + 1}. {prod.text}
-                    </CardText>
-                    <CardText>
-                      <Example
-                        hasExample={prod.hasExample}
-                        examples={prod.example}
-                      />
-                    </CardText>
-                  </CardBody>
-                </Card>
-              </>
+            {List.map((prod, index) => (
+              <Card key={index} className="listgroupDetails">
+                <CardBody>
+                  <CardText>
+                    {index + 1}. {prod.text}
+                  </CardText>
+                  <CardText>
+                    <Example
+                      hasExample={prod.hasExample}
+                      examples={prod.example}
+                    />
+                  </CardText>
+                </CardBody>
+              </Card>
             ))}
           </ListGroup>
         </section>
       );
     }
-    if (product.conclustion) {
-      conclusion = (
-        <p className="listgroupDetails pt-3">{product.conclustion}</p>
-      );
+
+    if (conclustion) {
+      conclusion = <p className="listgroupDetails pt-3">{conclustion}</p>;
     }
 
-    if (product.description) {
-      description = <p>{product.description}</p>;
+    if (articleDescription) {
+      description = <p>{articleDescription}</p>;
     }
+
+    return (
+      <>
+        {renderdata}
+        <Tabs activeKey={key} onSelect={(k) => setKey(k)} className="mb-3">
+          <Tab eventKey="read" title="Read">
+            {description}
+            {listview}
+            {list}
+            {conclusion}
+          </Tab>
+          <Tab eventKey="discuss" title="Discuss">
+            text2
+          </Tab>
+        </Tabs>
+      </>
+    );
   } else {
-    renderdata = (
+    return (
       <>
         <ListGroup flush numbered className="list-group">
           {productData.slice(0, 2).map((prod, index) => (
@@ -103,22 +129,6 @@ const Content = () => {
       </>
     );
   }
-  return (
-    <>
-      {renderdata}
-      <Tabs activeKey={key} onSelect={(k) => setKey(k)} className="mb-3">
-        <Tab eventKey="read" title="Read">
-          {description}
-          {listview}
-          {list}
-          {conclusion}
-        </Tab>
-        <Tab eventKey="discuss" title="Discuss">
-          text2
-        </Tab>
-      </Tabs>
-    </>
-  );
 };
 
 export default Content;

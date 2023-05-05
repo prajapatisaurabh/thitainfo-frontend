@@ -1,5 +1,6 @@
 import React from "react";
 import TreeNode from "./TreeNode";
+import "./Tree.css"; // import the styles
 
 const Tree = ({ treeData }) => {
   return (
@@ -10,4 +11,5 @@ const Tree = ({ treeData }) => {
     </ul>
   );
 };
+
 export default Tree;
