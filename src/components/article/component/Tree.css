@@ -5,10 +5,53 @@
   font-size: 18px;
   font-weight: bold;
   color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .index-setting:hover {
   background-color: #eee;
+}
+
+.index-setting.expanded {
+  background-color: #f0f0f0;
+}
+
+.index-setting > span:first-child {
+  flex-grow: 1;
+}
+
+.index-setting > span:last-child {
+  margin-left: 10px;
+}
+
+.children {
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 1px solid #ccc;
+  display: none;
+}
+
+.children.root {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+}
+
+.children.show {
+  display: block;
+  animation: slide-in 0.2s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Tree styles */
@@ -24,9 +67,31 @@ ul > li {
 
 ul ul {
   margin-left: 10px;
-  border-left: 1px solid #ccc;
 }
 
 ul ul > li:last-child {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .children {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .children.show {
+    animation: slide-down 0.2s ease-in-out forwards;
+  }
+
+  @keyframes slide-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

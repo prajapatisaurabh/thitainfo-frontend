@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/* Container for the content component */
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Tabs */
+.content-tabs {
+  border: none;
+}
+
+/* Read tab */
+.tab-read {
+  animation: slideIn 1s forwards;
+}
+
+/* Discuss tab */
+.tab-discuss {
+  animation: fadeIn 1s forwards;
+}
+
+/* Keyframe animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

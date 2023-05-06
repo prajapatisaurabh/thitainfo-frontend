@@ -4,6 +4,7 @@ import headerImg from "../../assets/img/header-img.svg";
 import TrackVisibility from "react-on-screen";
 import { Container, Col, Row } from "react-bootstrap";
 import "animate.css";
+import "../../assets/css/Home.css";
 
 const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -52,7 +53,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="banner" id="hero">
+    <section className="banner light-bg" id="hero">
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>

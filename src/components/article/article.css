@@ -1,32 +1,101 @@
 .article-row {
-  margin-top: 90px;
-  color: black;
-  font-family: "Open Sans";
-}
-
-.tree-col,
-.content-col,
-.main-col,
-.index-col {
   background-color: #f8f9fa;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-top: 100px;
+  padding: 15px;
 }
 
 .tree-col {
-  height: 100%;
+  background-color: #fff;
 }
 
+.content-col {
+  background-color: #fff;
+}
+
+.main-col,
 .index-col {
-  position: sticky;
-  top: 90px;
+  padding: 0 10px;
 }
 
-.listGroupDetails {
-  border: none;
-  background-color: #f8f9fa;
-  cursor: pointer;
+.main-col h1,
+.main-col h2,
+.main-col h3,
+.main-col h4,
+.main-col h5,
+.main-col h6 {
+  font-family: "Roboto", sans-serif;
 }
 
-.index-setting {
-  margin-left: 10px;
-  margin-top: 10px;
+.main-col p {
+  line-height: 1.5;
+}
+
+.content-index {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.content-index h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.content-index ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-index li {
+  margin-bottom: 5px;
+}
+
+.content-index a {
+  color: #333;
+  text-decoration: none;
+}
+
+.content-index a:hover {
+  color: #007bff;
+}
+
+/* Mobile Styles */
+@media (max-width: 576px) {
+  .article-row {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  .tree-col {
+    padding: 10px;
+  }
+
+  .content-col {
+    padding: 10px;
+  }
+
+  .content-index {
+    padding: 5px;
+  }
+
+  .main-col h1,
+  .main-col h2,
+  .main-col h3,
+  .main-col h4,
+  .main-col h5,
+  .main-col h6 {
+    font-size: 1.5rem;
+  }
+
+  .main-col p {
+    font-size: 1rem;
+  }
+
+  .content-index h5 {
+    font-size: 1.2rem;
+  }
 }

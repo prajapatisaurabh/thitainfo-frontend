@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import Tree from "./Tree";
 import { useNavigate } from "react-router-dom";
-import "./Tree.css"; // import the styles
+import "./Tree.css";
 
 const TreeNode = ({ data }) => {
   const { label, children } = data;
-  const [collapsed, setCollapsed] = useState(false);
-  const handleCollapsed = () => {
-    setCollapsed(!collapsed);
+  const [expanded, setExpanded] = useState(false);
+  const toggleExpanded = () => {
+    setExpanded(!expanded);
   };
   const navigate = useNavigate();
   return (
-    <>
+    <li>
       <div
-        onClick={handleCollapsed}
-        className="index-setting" // apply the style class
+        className={`index-setting${expanded ? " expanded" : ""}`}
+        onClick={toggleExpanded}
       >
         <span
           onClick={() => {
@@ -23,9 +23,16 @@ const TreeNode = ({ data }) => {
         >
           {label}
         </span>
+        {children && (
+          <span className="expand-icon">{expanded ? "-" : "+"}</span>
+        )}
       </div>
-      <ul>{collapsed && children && <Tree treeData={children} />}</ul>
-    </>
+      {children && (
+        <ul className={`children${expanded ? " show" : ""}`}>
+          <Tree treeData={children} />
+        </ul>
+      )}
+    </li>
   );
 };
 

@@ -58,6 +58,7 @@ const Contact = () => {
             <li>Name: ${name}</li>
             <li>Email: ${email}</li>
             <li>Message: ${message}</li>
+            <li>Message: Source: ThitaInfo</li>
           </ul>
           <p>Please follow up with the individual as soon as possible.</p>
         </body>

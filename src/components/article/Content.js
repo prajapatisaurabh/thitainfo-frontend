@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { productData } from "./Constant";
 import { Tabs, Tab } from "react-bootstrap";
 import ArticleHeader from "./component/ArticleHeader";
 import ProductList from "./component/ProductList";
 import ReadTab from "./component/ReadTab";
 import DiscussTab from "./component/DiscussTab";
+import "./Constant.css";
 
 const Content = () => {
   const { articleName } = useParams();
