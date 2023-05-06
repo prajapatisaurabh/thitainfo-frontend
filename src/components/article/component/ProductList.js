@@ -2,7 +2,7 @@ import React from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 import "./Article.css";
-import { productData } from "../../Constant";
+import { productData } from "./../Constant";
 
 const ProductList = () => {
   const navigate = useNavigate();

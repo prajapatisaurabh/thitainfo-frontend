@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { productData } from "../Constant";
+import { productData } from "./Constant";
 import { Tabs, Tab } from "react-bootstrap";
 import ArticleHeader from "./component/ArticleHeader";
 import ProductList from "./component/ProductList";

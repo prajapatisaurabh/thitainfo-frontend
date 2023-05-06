@@ -32,8 +32,8 @@ import PageNotFound from "./pages/PageNotFound";
 // import { ACCESS_TOKEN } from "./utils/constant";
 
 // Articles
-import ShowArticle from "./components/article/articleComponents/ShowArticle";
-import Content from "./components/article/innerArticles/Content";
+import Article from "./components/article/Article";
+import Content from "./components/article/Content";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -83,7 +83,7 @@ const App = () => {
               <Route path=":readMoreBtn" element={<MyBlog />} />
             </Route>
             <Route path="/contact" element={<Contact />} />
-            <Route path="/Articles" element={<ShowArticle />}>
+            <Route path="/Articles" element={<Article />}>
               <Route path=":articleName" element={<Content />} />
             </Route>
             <Route path="/code" element={<Code />}>

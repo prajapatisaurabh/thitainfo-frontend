@@ -1,12 +1,13 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
-import { TreeviewData } from "../Constant";
-import Content from "../innerArticles/Content";
-import ContentIndex from "../innerArticles/ContentIndex";
-import Tree from "../innerArticles/component/Tree";
+import { TreeviewData } from "./Constant";
+
+import Content from "./Content";
+import ContentIndex from "./ContentIndex";
+import Tree from "./component/Tree";
 import "./article.css";
 
-const ShowArticle = () => {
+const Article = () => {
   return (
     <>
       <Row className="article-row">
@@ -28,4 +29,4 @@ const ShowArticle = () => {
   );
 };
 
-export default ShowArticle;
+export default Article;
