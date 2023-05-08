@@ -10,7 +10,7 @@ const About = () => (
       <div className="container">
         <ol>
           <li>
-            <a href="index.html">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>About Us</li>
         </ol>

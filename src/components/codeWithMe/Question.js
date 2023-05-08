@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../../assets/css/question.css";
 
 const Question = () => {
@@ -10,7 +10,7 @@ const Question = () => {
         <div class="container">
           <ol>
             <li>
-              <a href="index.html">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>Pricing</li>
           </ol>

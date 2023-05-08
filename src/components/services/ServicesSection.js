@@ -9,14 +9,14 @@ const servicesData = [
     title: "Website Design",
     description:
       "Interact with your customers with a great looking website that is easy-to-use and simple to edit with our website design services.",
-    link: "/products",
+    link: "/service",
   },
   {
     icon: "bx bx-file",
     title: "Mobile App Development",
     description:
       "We are developing mobile experiences that serve the unique needs of your target audience by mobile application development.",
-    link: "/products",
+    link: "/service",
   },
 
   {
@@ -24,28 +24,28 @@ const servicesData = [
     title: "Digital Marketing",
     description:
       "We provide our clients with a strong creative digital marketing presence, through strategy, positioning and conversion.",
-    link: "/products",
+    link: "/service",
   },
   {
     icon: "bx bx-world",
     title: "Social Media Marketing",
     description:
       "By using the power of social media interact with your customers in a way that would never before have been possible with creative social media marketing services.",
-    link: "/products",
+    link: "/service",
   },
   {
     icon: "bx bx-arch",
     title: "Graphics & Design",
     description:
       "Coming soon ... Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur",
-    link: "/products",
+    link: "/service",
   },
   {
     icon: "bx bx-tachometer",
     title: "Software Development",
     description:
       "Our custom software development services to help your business run more efficiently. We measure, analyse and iterate to ensure your systems remain relevant and effective for users.",
-    link: "/products",
+    link: "/service",
   },
 ];
 

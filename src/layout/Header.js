@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand onClick={() => onUpdateActiveLink("")}>
           <img src={logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -70,7 +70,7 @@ const Header = () => {
             >
               Team
             </Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown title="Learn" id="basic-nav-dropdown">
               <NavDropdown.Item
                 className={
                   activeLink === "projects"

@@ -42,7 +42,7 @@ const App = () => {
     // Simulate a delay to show the preloader
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 500);
   }, []);
 
   useEffect(() => {

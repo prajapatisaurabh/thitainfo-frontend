@@ -3,8 +3,10 @@ import { Card, Button } from "react-bootstrap";
 import "./blogs/MyBlog.css"; // Import the CSS file
 
 import { BlogJson } from "./ConstantBlog";
+import { useNavigate } from "react-router-dom";
 
 function MyBlog() {
+  const navigate = useNavigate();
   return (
     <div className="my-blog-container">
       {/* Add a class to the container */}
@@ -16,7 +18,12 @@ function MyBlog() {
           <Card.Body>
             <Card.Title>{blog.name}</Card.Title>
             <Card.Text>{blog.contentHeader.header}</Card.Text>
-            <Button variant="primary" href={blog.contentHeader.readMoreBtn}>
+            <Button
+              variant="primary"
+              onClick={() => {
+                navigate(blog.contentHeader.readMoreBtn);
+              }}
+            >
               Read More
             </Button>
           </Card.Body>

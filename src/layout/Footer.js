@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import "./Footer.css";
 
 import { INSTAGRAM_URL, YOUTUBE_URL } from "../constrains/Constant";
@@ -49,14 +49,18 @@ const Footer = () => {
                 <a
                   href={INSTAGRAM_URL}
                   className="text-decoration-none text-white"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <FaInstagram size={18} className="me-2" /> Instagram
+                  <FaLinkedinIn size={18} className="me-2" /> LinkedinIn
                 </a>
               </li>
               <li>
                 <a
                   href={YOUTUBE_URL}
+                  target="_blank"
                   className="text-decoration-none text-white"
+                  rel="noreferrer"
                 >
                   <FaYoutube size={18} className="me-2" /> Youtube
                 </a>

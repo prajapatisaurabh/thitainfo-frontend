@@ -5,8 +5,10 @@ import TrackVisibility from "react-on-screen";
 import { Container, Col, Row } from "react-bootstrap";
 import "animate.css";
 import "../../assets/css/Home.css";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
@@ -87,7 +89,7 @@ const Hero = () => {
                     audience, your company strives to thrive in the competitive
                     digital world.
                   </p>
-                  <button onClick={() => console.log("connect")}>
+                  <button onClick={() => navigate("/contact")}>
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
                 </div>

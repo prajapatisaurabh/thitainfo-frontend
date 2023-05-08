@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import MyBlog from "../components/blog/MyBlog";
+import { Link } from "react-router-dom";
 
 const Blog = () => (
   <main id="main">
@@ -8,7 +8,7 @@ const Blog = () => (
       <div className="container">
         <ol>
           <li>
-            <a href="index.html">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>Blog</li>
         </ol>

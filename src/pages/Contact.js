@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ContactInfo from "../components/contact/ContactInfo";
 import "../components/contact/ContactUs.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -95,7 +96,7 @@ const Contact = () => {
         <div className="container">
           <ol>
             <li>
-              <a href="index.html">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>contactus</li>
           </ol>
