@@ -3,7 +3,7 @@ import ContactInfo from "../components/contact/ContactInfo";
 import "../components/contact/ContactUs.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import { API_URL } from "../config/index";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ const Contact = () => {
   const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // prevent the default form submission behavior
+    e.preventDefault();
 
     // Form validation
     if (!name.trim() || !email.trim() || !message.trim()) {
@@ -21,8 +21,7 @@ const Contact = () => {
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      //toast.error("Please enter a valid email address");
-      return; // stop the function if validation fails
+      return;
     }
 
     setLoading(true);
@@ -30,53 +29,18 @@ const Contact = () => {
 
     try {
       // Send contact data to the backend
-      const contactResponse = await axios.post(
-        "http://localhost:8080/api/frontend/contact",
+      await axios.post(
+        `${API_URL}/contact/send`,
         {
           name: name.trim(),
           email: email.trim(),
           message: message.trim(),
+          source: "Thita Website",
         },
         {
           withCredentials: true,
         }
       );
-
-      console.log("Contact: ", contactResponse.data);
-
-      // Prepare email data
-      const mailData = {
-        to: "saurabhprajapati120@gmail.com",
-        subject: "Contact Form Submitted",
-        message: `<html>
-        <head>
-          <title>New Contact Form Submission</title>
-        </head>
-        <body>
-          <h1>New Contact Form Submission</h1>
-          <p>A new contact form submission has been received:</p>
-          <ul>
-            <li>Name: ${name}</li>
-            <li>Email: ${email}</li>
-            <li>Message: ${message}</li>
-            <li>Message: Source: ThitaInfo</li>
-          </ul>
-          <p>Please follow up with the individual as soon as possible.</p>
-        </body>
-      </html>`,
-      };
-
-      // Send email data to the backend
-      const mailResponse = await axios.post(
-        "http://localhost:8080/api/mail/sendHtmlEmail",
-        mailData,
-        {
-          withCredentials: true,
-        }
-      );
-
-      console.log("Mail response: ", mailResponse.data);
-
       // Reset form data and show success message
       setName("");
       setEmail("");
