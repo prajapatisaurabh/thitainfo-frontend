@@ -111,11 +111,11 @@ const Header = () => {
               Contact Us
             </Nav.Link>
           </Nav>
-          <span className="navbar-text">
+          {/* <span className="navbar-text">
             <button className="vvd">
               <span>Login</span>
             </button>
-          </span>
+          </span> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
